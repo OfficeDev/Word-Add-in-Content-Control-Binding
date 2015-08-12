@@ -79,7 +79,8 @@ If the app starts with a blank document instead of the one shown in Figure 1, en
 **Change log**
 
 
-First release: March 15, 2013.
+* First release: March 15, 2013.
+* Release on GitHub: August 12, 2015
 
 **Related content**
 
