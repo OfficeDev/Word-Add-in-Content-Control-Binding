@@ -1,0 +1,296 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head><link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:header.1,0:ImageSprite,1:LinkList;/Areas/Epx/Themes/Office/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=A62A5BF23F252E1178626DB204E20959" xmlns="http://www.w3.org/1999/xhtml" />
+<link rel="stylesheet" type="text/css" href="https://i-msdn.sec.s-msft.com/Combined.css?resources=0:footer.1,0:ImageSprite,1:LinkList;/Areas/Epx/Themes/Office/Content:0,/Areas/Epx/Themes/Base/Content:1&amp;amp;v=10A1AB8C670F7163390CCF7F9BA0BE8C" xmlns="http://www.w3.org/1999/xhtml" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>Apps for Office: Binding to and validating content controls in Word 2013</title>
+        <link href="description/Galleries.css" type="text/css" rel="Stylesheet" /><link href="description/Layout.css" type="text/css" rel="Stylesheet" /><link href="description/Brand.css" type="text/css" rel="Stylesheet" /><link href="description/3b6bb62b-5573-4ff7-9b06-cb35a89aef61Brand.css" type="text/css" rel="Stylesheet" />
+        <link href="https://i1.code.msdn.s-msft.com/office/content/common/iframedescription.css" rel="Stylesheet" type="text/css" />
+        <script src="https://i1.code.msdn.s-msft.com/office/content/common/offline.js" type="text/javascript"></script>
+        <style type="text/css">
+            #projectInfo {
+                overflow: auto;
+            }
+            #longDesc {
+                clear:both;
+                margin: 25px 0 10px 0;
+            }
+
+            #SampleIndexList{
+                margin-left: 15px;
+            }
+        </style>
+    </head>
+<body>
+    <div id="offlineDescription">
+        <h1>Apps for Office: Binding to and validating content controls in Word 2013</h1>
+        <br/>
+        <div id="projectInfo">
+            <div class="section">
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Technologies">Technologies</label>
+                        <div id="Technologies">
+                            Word 2013, apps for Office
+                        </div>
+                    </div>
+                    <div class="itemBarLong tagsContainer">
+                        <label for="Topics">Topics</label>
+                        <div id="Topics">
+                            Binding, data and storage
+                        </div>
+                    </div>
+                <div class="itemBarLong">
+                    <label for="Platforms">Platforms</label>
+                    <div id="Platforms">
+                        Desktop, Data
+                    </div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="Requirements">Requirements</label>
+                    <div id="Requirements">
+                        
+                    </div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Primary language</label>
+                    <div id="LastUpdated">en-US</div>
+                </div>
+                <div class="itemBar">
+                    <label for="LastUpdated">Updated</label>
+                    <div id="LastUpdated">6/26/2015</div>
+                </div>
+                <div class="itemBarLong">
+                    <label for="License">License</label>
+                    <div id="License">
+                        <a href="license.rtf">Apache License, Version 2.0</a></div>
+                </div>
+                <div class="itemBar">
+                    <div class="viewonlinecont">
+                        <a data-link="online" href="https://code.msdn.microsoft.com/office/Apps-for-Office-Binding-to-39ccfed8">View this sample online</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+                   
+<script type="text/javascript">
+    function initializePage() {
+        var otherTabClass = 'otherTab';
+        var hiddenPreClass = 'hidden';
+
+        var htmlDecode = function(encodedData) {
+            var decodedData = "";
+            if (encodedData) {
+                var div = document.createElement('div');
+                div.innerHTML = encodedData;
+                decodedData = div.firstChild.nodeValue.replace( /\\r\\n/ig , '\r\n');
+            }
+            return decodedData;
+        };
+                
+        Galleries.iterateElem(Galleries.findElem(null, 'div', 'scriptcode'), function (index, scriptBlock) {
+            var titleElem = Galleries.findElem(scriptBlock, 'div', 'title')[0];
+            var labelElems = Galleries.findElem(titleElem, 'span');
+            if (labelElems.length == 0) {
+                labelElems = titleElem;
+            }
+            var languageSpans = Galleries.findElem(scriptBlock, 'span', 'hidden');
+            var pres = Galleries.findElem(scriptBlock, 'pre');
+            if (languageSpans.length > 0 && pres.length > 1) {
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    var languageSpan = languageSpans[index];
+                            
+                    elem.code = codePre.innerHTML.replace( /(\r(\n)?)|((\r)?\n)/ig , '\\r\\n');
+                            
+                    codePre.className = codePre.className.replace(hiddenPreClass, '');
+                            
+                    languageSpan.parentNode.removeChild(languageSpan);
+                });
+
+                pres = Galleries.findElem(scriptBlock, 'pre');
+                Galleries.iterateElem(labelElems, function(index, elem) {
+                    var codePre = pres[index];
+                    var labelSpan = elem;
+                    if (index == 0) {
+                        scriptBlock.activeTab = 0;
+                    }
+                    else {
+                        labelSpan.className += otherTabClass;
+                        codePre.className += hiddenPreClass;
+                    }
+                    Galleries.attachEventHandler(labelSpan, 'click', function(e) {
+                        var activeTab = scriptBlock.activeTab;
+                        labelElems[activeTab].className += otherTabClass;
+                        pres[activeTab].className += hiddenPreClass;
+
+                        codePre.className = codePre.className.replace(hiddenPreClass, '');
+                        labelSpan.className = labelSpan.className.replace(otherTabClass, '');
+                        scriptBlock.activeTab = index;
+                    });
+                });
+
+                var preview = Galleries.findElem(scriptBlock, 'div', 'preview');
+                if (preview.length == 0) {
+                    preview.push(pres[pres.length - 1]);
+                }
+                Galleries.iterateElem(preview, function(index, elem) {
+                    elem.parentNode.removeChild(elem);
+                });
+
+                if (window.clipboardData && clipboardData.setData) {
+                    var copyLink = document.createElement('a');
+                    copyLink.href = 'javascript:void(0);';
+                    copyLink.className = 'copyCode';
+                    copyLink.innerHTML = 'Copy code';
+                    Galleries.attachEventHandler(copyLink, 'click', function (e) {
+                        clipboardData.setData("Text", htmlDecode(labelElems[scriptBlock.activeTab].code));
+                        return false;
+                    });
+                    scriptBlock.insertBefore(copyLink, scriptBlock.childNodes[0]);
+                }
+            }
+        });
+    }
+
+    Galleries.onWindowLoad(function(){
+        initializePage();
+    });
+
+</script>
+<div id="longDesc">
+    
+<div id="header">The CorporateBio.docx file is set as the <span><span class="keyword">StartAction</span></span> property of the task pane app. The document has three content controls (Name, Position, and About Me) that the user should provide values for.
+ The following screen shot shows how the document surface when the document is first opened.</div>
+<div id="mainSection">
+<div id="mainBody">
+<div class="introduction">
+<div class="section" id="sectionSection0">
+<div class="caption">Figure 1. CorporateBio.docx showing the task pane app</div>
+<br>
+<img alt="CorporateBio.docx showing the task pane app" id="79581" src="description/CG_CorpBioWd_fig01.gif" width="717" height="619">
+<p>The sample shows the following:</p>
+<ul>
+<li>
+<p>How to use JavaScript to add bindings to the content controls in the document.</p>
+</li><li>
+<p>How to verify that bindings are in place before attempting to retrieve the values from them.</p>
+</li><li>
+<p>How to retrieve values from content controls and validate that the user has entered required data.</p>
+</li></ul>
+</div>
+<h1 class="heading">Prerequisites</h1>
+<div class="section" id="sectionSection1">
+<p>This sample requires:</p>
+<ul>
+<li>
+<p>Visual Studio 2012 (RTM).</p>
+</li><li>
+<p>Office 2013 tools for Visual Studio 2012 (RTM).</p>
+</li><li>
+<p>Word 2013 (RTM).</p>
+</li></ul>
+</div>
+<h1 class="heading">Key components of the sample</h1>
+<div class="section" id="sectionSection2">
+<p>The sample app contains:</p>
+<ul>
+<li>
+<p>The CorporateBio project, which contains:</p>
+<ul>
+<li>
+<p>The CorporateBio.xml manifest file.</p>
+</li><li>
+<p>The CorporateBio.docx document, which is prepopulated with three RichTextContentControl objects.</p>
+<div class="alert">
+<table width="100%" cellspacing="0" cellpadding="0">
+<tbody>
+<tr>
+<th align="left"><strong>Note</strong></th>
+</tr>
+<tr>
+<td>
+<p>Each object has had its <span><span class="keyword">Title</span></span> property set, which enables it to be bound to in JavaScript.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</li></ul>
+</li><li>
+<p>The CorporateBioWeb project, which contains multiple template files. However, the two files that have been developed as part of this sample solution include:</p>
+<ul>
+<li>
+<p>CorporateBio.html (in the Pages folder). This contains the HTML user interface that is displayed in the task pane. It consists of a &lt;div&gt; with an id of validationReport, and two buttons.</p>
+</li><li>
+<p>CorporateBio.js (in the Scripts folder). This script file contains code that runs when the app is loaded. This startup script attempts to add bindings to the content controls in the document. The success or failure of this operation is reported back to the
+ CorporateBio.html page. The script file also includes the <span><span class="keyword">Click</span></span> event handlers for the two buttons in CorporateBio.html. One of these buttons retrieves and validates the content in the content controls by accessing
+ the bindings that were added in the startup script. The other button provides a stub procedure that simulates submitting the data from the bindings to a back-end system or process, but only if the values from the bindings have been retrieved and validated
+ by the first button. In all cases, a suitable report is added to the CorporateBio.html page.</p>
+</li></ul>
+</li></ul>
+<p>All other files are automatically provided by the Visual Studio project template for apps for Office, and they have not been modified in the development of this sample app.</p>
+</div>
+<h1 class="heading">Configure the sample</h1>
+<div class="section" id="sectionSection3">
+<p>To configure the sample, open the CorporateBio.sln file with Visual Studio 2012. No other configuration is necessary.</p>
+</div>
+<h1 class="heading">Build the sample</h1>
+<div class="section" id="sectionSection4">
+<p>To build the sample, choose the Ctrl&#43;Shift&#43;B keys.</p>
+</div>
+<h1 class="heading">Run and test the sample</h1>
+<div class="section" id="sectionSection5">
+<p>To run and test the sample, choose the F5 key.</p>
+<p>The following screen shots show examples of the document at various stages of the process. Figure 2 shows a document opened with content controls successfully bound to a custom XML part.<br>
+<br>
+</p>
+<div class="caption">Figure 2. The status for each binding has been reported in the task pane.</div>
+<br>
+<img alt="Open Word document showing successful binding" id="79582" src="description/CG_CorpBioWd_fig02.gif" width="349" height="325">
+<p><br>
+<br>
+Figure 3 shows the task pane app UI after the Validate button has been chosen.</p>
+<div class="caption">Figure 3. The bindings have been retrieved.</div>
+<br>
+<img alt="Validate button has been chosen" id="79583" src="description/CG_CorpBioWd_fig03.gif" width="351" height="337">
+<p><br>
+<br>
+Figure 4 shows the task pane app UI after the Submit button has been chosen.</p>
+<div class="caption">Figure 4. The data has passed validation.</div>
+<br>
+<img alt="Data has been validated" id="79584" src="description/CG_CorpBioWd_fig04.gif" width="349" height="308"></div>
+<h1 class="heading">Troubleshooting</h1>
+<div class="section" id="sectionSection6">
+<p>If the app starts with a blank document instead of the one shown in Figure 1, ensure that the
+<strong><span class="keyword">StartAction</span></strong> property of the CorporateBio project is set to CorporateBio\CorporateBio.docx and not just to Word.</p>
+<p>For Visual Studio 2013, when you first load the .sln you need to check that the CorporateBio project has the
+<strong>Start Document </strong>property as &quot;CorporateBio.docx&quot;. When you run the code, select the &quot;CorporateBio&quot; app (on the INSERT ribbon in MyApps).</p>
+</div>
+<h1 class="heading">Change log</h1>
+<div class="section" id="sectionSection7">
+<p>First release: March 15, 2013.</p>
+</div>
+<h1 class="heading">Related content</h1>
+<div class="section" id="sectionSection8">
+<ul>
+<li>
+<p><a href="http://msdn.microsoft.com/en-us/library/office/jj220060.aspx" >Build apps for Office</a></p>
+</li><li>
+<p><a href="http://msdn.microsoft.com/en-us/library/office/apps/fp160966.aspx" >Bindings object (apps for Office)</a></p>
+</li><li>
+<p><a href="http://msdn.microsoft.com/en-us/library/office/apps/fp123511(v=office.15).aspx" >Binding to regions in a document or spreadsheet</a></p>
+</li></ul>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+
+
+    </div>
+</body>
+</html>
