@@ -10,6 +10,6 @@
     <GeneratedProductId>{317d5bf7-8beb-498a-b603-73b58919b78f}</GeneratedProductId>
     <GeneratedAppVersion>1.0.0.0</GeneratedAppVersion>
     <GeneratedClientSecret>VBUAIq6heQFyEc4DdMNv9QQ/dDaQ3T4TxYCgYDiSBrU=</GeneratedClientSecret>
-    <OfficeAppStartDocument>CorporateBio_2.docx</OfficeAppStartDocument>
+    <OfficeAppStartDocument>CorporateBio.docx</OfficeAppStartDocument>
   </PropertyGroup>
 </Project>
