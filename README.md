@@ -44,7 +44,11 @@ All other files are automatically provided by the Visual Studio project template
 
 **Configure the sample**
 
-To configure the sample, open the CorporateBio.sln file with Visual Studio 2012. No other configuration is necessary.
+1. Open the CorporateBio.sln file with Visual Studio.
+2. Select the **CorporateBio** project in **Solution Explorer**.
+3. In the **Properties** pane, set **Start Action** to **Office Desktop Client**.
+4. Set **Start Document** to **New Word Document**.
+
 
 **Build the sample**
 
@@ -52,7 +56,9 @@ To build the sample, choose the Ctrl+Shift+B keys.
 
 **Run and test the sample**
 
-To run and test the sample, choose the F5 key.
+1. Choose the F5 key. Word will open. There will be a **Corporate Bio** group on the **Home** ribbon with an **Open** button. *DO NOT CLICK THE BUTTON YET.*
+2. In Word, open the file `{project root}\C#\CorporateBio\CorporateBio.docx`.
+2. On the **Home** ribbon, click the **Open** button in the **Corporate Bio** group.
 
 The following screen shots show examples of the document at various stages of the process. Figure 2 shows a document opened with content controls successfully bound to a custom XML part.
 
