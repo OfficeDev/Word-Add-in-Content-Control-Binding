@@ -94,3 +94,6 @@ If the app starts with a blank document instead of the one shown in Figure 1, en
 * [Bindings object (apps for Office)](http://msdn.microsoft.com/en-us/library/office/apps/fp160966.aspx)
 * [Binding to regions in a document or spreadsheet](http://msdn.microsoft.com/en-us/library/office/apps/fp123511(v=office.15).aspx)
 
+
+
+This project has adopted the [Microsoft Open Source Code of Conduct](https://opensource.microsoft.com/codeofconduct/). For more information, see the [Code of Conduct FAQ](https://opensource.microsoft.com/codeofconduct/faq/) or contact [opencode@microsoft.com](mailto:opencode@microsoft.com) with any additional questions or comments.
