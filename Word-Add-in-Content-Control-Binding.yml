@@ -1,0 +1,19 @@
+### YamlMime:Sample
+sample:
+- name: Word-Add-in-Content-Control-Binding
+  path: ''
+  description: The sample shows how to use JavaScript to add bindings to the content controls in the document and verify that bindings are in place before getting values from them.
+  readme: ''
+  generateZip: FALSE
+  isLive: TRUE
+  technologies:
+  - Office Add-in
+  azureDeploy: ''
+  author: JohnAustin
+  platforms: []
+  languages:
+  - JavaScript
+  extensions:
+    products:
+    - Word
+    scenarios: []
