@@ -1,3 +1,16 @@
+---
+topic: sample
+products:
+- Word
+- Office 365
+languages:
+- JavaScript
+extensions:
+  contentType: samples
+  technologies:
+  - Add-ins
+  createdDate: 8/12/2015 11:23:34 AM
+---
 # Word-Add-in-Content-Control-Binding
 The sample shows how to use JavaScript to add bindings to the content controls in the document and verify that bindings are in place before getting values from them. 
 
